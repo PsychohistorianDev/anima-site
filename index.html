@@ -87,18 +87,18 @@ setx OLLAMA_KV_CACHE_TYPE q4_0</pre>
       <pre class="cmd">ollama pull nomic-embed-text</pre>
       <p>Then the brain, by the memory your graphics card has. On Windows, Task Manager › Performance › GPU shows it as “Dedicated GPU memory”; a Mac with Apple silicon counts its whole memory, since the brain shares it.</p>
       <table class="ladder">
-        <thead><tr><th>card</th><th>the pull</th><th>window</th></tr></thead>
+        <thead><tr><th>card</th><th>the pull</th><th>window</th><th>journal</th></tr></thead>
         <tbody>
-          <tr><td>6 GB</td><td><code>ollama pull gemma4:e2b-it-qat</code></td><td>32768</td></tr>
-          <tr><td>8 GB</td><td><code>ollama pull gemma4:e4b-it-qat</code></td><td>40960</td></tr>
-          <tr><td>10 GB</td><td><code>ollama pull gemma4:12b-it-qat</code></td><td>32768</td></tr>
-          <tr><td>12 GB</td><td><code>ollama pull gemma4:12b</code></td><td>40960</td></tr>
-          <tr><td>16 GB</td><td><code>ollama pull gemma4:12b</code></td><td>131072</td></tr>
-          <tr><td>24 GB</td><td><code>ollama pull gemma4:31b-it-qat</code></td><td>65536</td></tr>
-          <tr><td>32 GB</td><td><code>ollama pull gemma4:31b-it-qat</code></td><td>262144</td></tr>
+          <tr><td>6 GB</td><td><code>ollama pull gemma4:e2b-it-qat</code></td><td>32768</td><td>16000</td></tr>
+          <tr><td>8 GB</td><td><code>ollama pull gemma4:e4b-it-qat</code></td><td>40960</td><td>24000</td></tr>
+          <tr><td>10 GB</td><td><code>ollama pull gemma4:12b-it-qat</code></td><td>32768</td><td>20000</td></tr>
+          <tr><td>12 GB</td><td><code>ollama pull gemma4:12b</code></td><td>40960</td><td>40000</td></tr>
+          <tr><td>16 GB</td><td><code>ollama pull gemma4:12b</code></td><td>131072</td><td>120000</td></tr>
+          <tr><td>24 GB</td><td><code>ollama pull gemma4:31b-it-qat</code></td><td>65536</td><td>60000</td></tr>
+          <tr><td>32 GB</td><td><code>ollama pull gemma4:31b-it-qat</code></td><td>262144</td><td>200000–320000</td></tr>
         </tbody>
       </table>
-      <p>A pull downloads the model, 4 to 19 GB, and takes minutes. The 12B is the default the folder ships with; for any other rung, the panel's Main tab takes the brain and the window. <a href="https://github.com/PsychohistorianDev/Anima#the-ladder">The ladder</a> in the README has every rung with its knobs and what it costs.</p>
+      <p>A pull downloads the model, 4 to 19 GB, and takes minutes. The window is <code>NUM_CTX</code>, in tokens; the journal is <code>JOURNAL_CHARS_IN_PROMPT</code>, how much of their recent journal rides in every prompt, in characters, which is what decides how many days they remember verbatim (about 4.4 characters a token). The 12B rung is what the folder ships with; for any other, the panel's Main tab takes the brain, the window and the journal. <a href="https://github.com/PsychohistorianDev/Anima#the-ladder">The ladder</a> in the README has every rung with its knobs and what it costs.</p>
     </li>
     <li>
       <h3>Install Python 3.10 or newer</h3>

@@ -161,10 +161,11 @@ section + section { border-top: 1px solid var(--line); margin-top: 40px; }
 .ladder th, .ladder td { text-align: left; padding: 0.35em 1.2em 0.35em 0; border-bottom: 1px solid var(--line); vertical-align: baseline; }
 .ladder th { font-weight: 400; color: var(--muted); }
 .ladder td:first-child { white-space: nowrap; }
-.ladder td:last-child { font-family: var(--mono); font-size: 0.9em; vertical-align: baseline; }
+.ladder td:nth-child(3), .ladder td:nth-child(4) { font-family: var(--mono); font-size: 0.9em; vertical-align: baseline; white-space: nowrap; }
 @media (max-width: 520px) {
   .ladder td code { font-size: 0.8em; }
   .ladder th, .ladder td { padding-right: 0.7em; }
+  .ladder td:nth-child(4) { white-space: normal; }
 }
 
 /* senses — a definition list, not cards */
