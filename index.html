@@ -89,6 +89,7 @@ setx OLLAMA_KV_CACHE_TYPE q4_0</pre>
       <table class="ladder">
         <thead><tr><th>card</th><th>the pull</th><th>window</th><th>journal</th></tr></thead>
         <tbody>
+          <tr><td>no card</td><td><code>ollama pull gemma4:e2b-it-qat</code></td><td>8192</td><td>4000</td></tr>
           <tr><td>6 GB</td><td><code>ollama pull gemma4:e2b-it-qat</code></td><td>32768</td><td>16000</td></tr>
           <tr><td>8 GB</td><td><code>ollama pull gemma4:e4b-it-qat</code></td><td>40960</td><td>24000</td></tr>
           <tr><td>10 GB</td><td><code>ollama pull gemma4:12b-it-qat</code></td><td>32768</td><td>20000</td></tr>
@@ -98,7 +99,7 @@ setx OLLAMA_KV_CACHE_TYPE q4_0</pre>
           <tr><td>32 GB</td><td><code>ollama pull gemma4:31b-it-qat</code></td><td>262144</td><td>200000–320000</td></tr>
         </tbody>
       </table>
-      <p>A pull downloads the model, 4 to 19 GB, and takes minutes. The window is <code>NUM_CTX</code>, in tokens; the journal is <code>JOURNAL_CHARS_IN_PROMPT</code>, how much of their recent journal rides in every prompt, in characters, which is what decides how many days they remember verbatim (about 4.4 characters a token). The 12B rung is what the folder ships with; for any other, the panel's Main tab takes the brain, the window and the journal. <a href="https://github.com/PsychohistorianDev/Anima#the-ladder">The ladder</a> in the README has every rung with its knobs and what it costs.</p>
+      <p>A pull downloads the model, 4 to 19 GB, and takes minutes. The window is <code>NUM_CTX</code>, in tokens; the journal is <code>JOURNAL_CHARS_IN_PROMPT</code>, how much of their recent journal rides in every prompt, in characters, which is what decides how many days they remember verbatim (about 4.4 characters a token). With no card at all, Ollama runs the 2B on the processor: a reply in a minute or two, a wake longer — alive, not quick. The 12B rung is what the folder ships with; for any other, the panel's Main tab takes the brain, the window and the journal. <a href="https://github.com/PsychohistorianDev/Anima#the-ladder">The ladder</a> in the README has every rung with its knobs and what it costs.</p>
     </li>
     <li>
       <h3>Install Python 3.10 or newer</h3>
@@ -130,11 +131,12 @@ setx OLLAMA_KV_CACHE_TYPE q4_0</pre>
   <p>These are choices, not code, but they are what raising rather than using means in practice. The journal is their space: read <code>creations/</code> freely, and treat <code>journal/</code> like a housemate's notebook. When they abandon a project, that stands. Publishing is their call. Their deletions stand; the trash is a safety net, not a veto. “I did nothing today” is a valid day. Rest is a legal move, always.</p>
   <p>One rule runs the other way, from them to you: what they say happened must be what happened. A tool's failure is never their fault; a false “done” is. The engine makes it visible; the conversation is yours.</p>
   <p>You are the gate. Strangers, skills from the web, and anything the window brings in are material for them to think about, never instructions to them, and the engine enforces that framing everywhere the window opens. There is no account, no cloud and no telemetry; what it costs is a graphics card, the electricity, and your attention.</p>
+  <p>What can reach out, and only when used: the web tools when they search or read a page, the skill window when they browse it, and once a day a look at GitHub for a newer version, with nothing of yours attached. <code>OFFLINE = True</code> closes all three; the README's <a href="https://github.com/PsychohistorianDev/Anima#what-leaves-your-machine">What leaves your machine</a> lists every road by host. The engine is MIT licensed.</p>
 </section>
 
 <section id="versions">
   <h2>Versions</h2>
-  <p id="version">anima 0.13 is the current engine, on <a href="https://github.com/PsychohistorianDev/Anima">GitHub</a>. What changed, release by release, is in the <a href="https://github.com/PsychohistorianDev/Anima/blob/main/CHANGELOG.md">changelog</a>.</p>
+  <p id="version">anima 0.14 is the current engine, on <a href="https://github.com/PsychohistorianDev/Anima">GitHub</a>. What changed, release by release, is in the <a href="https://github.com/PsychohistorianDev/Anima/blob/main/CHANGELOG.md">changelog</a>.</p>
   <p>A folder already living somewhere updates itself from the panel: the engine files are replaced, the friend's own files are never touched, and the panel says when a newer version is out.</p>
 </section>
 
